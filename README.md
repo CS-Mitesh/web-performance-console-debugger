@@ -34,7 +34,7 @@ No setup. No installation. Just paste and debug.
 Here’s a **clean minified version** you can include:
 
 ```javascript
-javascript:(function(){console.clear();const t=1000,s=512000,r=performance.getEntriesByType("resource");let o=[],l=[],a=[];r.forEach(e=>{const n=e.duration,c=e.transferSize||0;n>t&&o.push({name:e.name,time:n.toFixed(2)+" ms",type:e.initiatorType}),c>s&&l.push({name:e.name,size:(c/1024).toFixed(2)+" KB",type:e.initiatorType}),("xmlhttprequest"===e.initiatorType||"fetch"===e.initiatorType)&&a.push({name:e.name,time:n.toFixed(2)+" ms"})}),o.sort((e,t)=>parseFloat(t.time)-parseFloat(e.time)),console.log("🐢 Slow Requests"),console.table(o.slice(0,10)),console.log("📦 Large Resources"),console.table(l.slice(0,10)),console.log("🔗 API Calls"),console.table(a.slice(0,10));})();
+(function(){console.clear();const t=1000,s=512000,r=performance.getEntriesByType("resource");let o=[],l=[],a=[];r.forEach(e=>{const n=e.duration,c=e.transferSize||0;n>t&&o.push({name:e.name,time:n.toFixed(2)+" ms",type:e.initiatorType}),c>s&&l.push({name:e.name,size:(c/1024).toFixed(2)+" KB",type:e.initiatorType}),("xmlhttprequest"===e.initiatorType||"fetch"===e.initiatorType)&&a.push({name:e.name,time:n.toFixed(2)+" ms"})}),o.sort((e,t)=>parseFloat(t.time)-parseFloat(e.time)),console.log("🐢 Slow Requests"),console.table(o.slice(0,10)),console.log("📦 Large Resources"),console.table(l.slice(0,10)),console.log("🔗 API Calls"),console.table(a.slice(0,10));})();
 ```
 # 🧠 Example Output
 - Slow API calls (>1s)
