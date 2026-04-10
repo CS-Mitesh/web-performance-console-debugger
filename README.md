@@ -27,11 +27,7 @@ No setup. No installation. Just paste and debug.
 
 ---
 
-## 📌 Script
-
-# 🧩 Pure JavaScript Version (Minified / Bookmarklet)
-
-Here’s a **clean minified version** you can include:
+# 📌 Script
 
 ```javascript
 (function () {
@@ -129,18 +125,18 @@ Here’s a **clean minified version** you can include:
   console.log("\n✅ Done");
 })();
 ```
-# 🧠 Example Output
+## 🧠 Example Output
 - Slow API calls (>1s)
 - Large JS/CSS files (>500KB)
 - Heavy DOM nodes (large HTML or too many children)
 - Backend response time (TTFB)
 
-# ⚠️ Limitations
+## ⚠️ Limitations
 - Cannot access request payload (browser security restriction)
 - Works on already loaded resources (unless used before reload)
 - Some frameworks may hide API calls
 
-# 🔥 Pro Tips
+## 🔥 Pro Tips
 - Run performance.clearResourceTimings() before actions (like login)
 - Then trigger action and re-run script
 - Use alongside Chrome DevTools Network tab for deeper debugging
